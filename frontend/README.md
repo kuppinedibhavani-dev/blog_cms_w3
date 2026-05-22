@@ -1,7 +1,7 @@
 BLOG/CMS SYSTEM(PART-1)
 
-  GITHUB REPOSITORY LINK:
-  FRONTEND VERCEL LINK:
+  GITHUB REPOSITORY LINK:https://github.com/kuppinedibhavani-dev/blog_cms_w3
+  FRONTEND VERCEL LINK: blogcmsw3.vercel.app
 
 1.DATABASE SCHEMA DIAGRAM:
              ![alt text](image.png)
