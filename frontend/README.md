@@ -18,6 +18,7 @@ BLOG/CMS SYSTEM(PART-1)
      Signup page: ![alt text](image-1.png)
      Login page: ![alt text](image-2.png)
      Home page: ![alt text](image-3.png)
+     Posts page: ![alt text](image-4.png)
     
 4.NAVIGATION STRUCTURE:
    Navbar
