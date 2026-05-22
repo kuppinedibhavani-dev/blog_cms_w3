@@ -17,7 +17,7 @@ function CreatePost() {
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        "http://localhost:5000/api/posts",
+        "import.meta.env.VITE_API_URL/api/posts",
         {
           title,
           content,

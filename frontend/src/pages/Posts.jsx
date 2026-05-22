@@ -22,7 +22,7 @@ const [updatedContent, setUpdatedContent] = useState("");
       try {
 
         const response = await axios.get(
-          "http://localhost:5000/api/posts"
+          `${import.meta.env.VITE_API_URL}/api/posts`
         );
 
         setPosts(response.data);
@@ -84,7 +84,7 @@ const updatePost = async (id) => {
     const token = localStorage.getItem("token");
 
     const response = await axios.put(
-      `http://localhost:5000/api/posts/${id}`,
+      `${import.meta.env.VITE_API_URL}/api/posts/${id}`,
       {
         title: updatedTitle,
         content: updatedContent,
