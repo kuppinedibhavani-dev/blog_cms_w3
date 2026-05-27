@@ -13,8 +13,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://blogcmsw3.vercel.app",
-    credentials: true,
+    origin: "*",
   })
 );
 
