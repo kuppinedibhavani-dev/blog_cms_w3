@@ -17,7 +17,7 @@ function CreatePost() {
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        "import.meta.env.VITE_API_URL/api/posts",
+        `${import.meta.env.VITE_API_URL}/api/posts`,
         {
           title,
           content,
@@ -31,12 +31,21 @@ function CreatePost() {
 
       alert(response.data.message);
 
+      // Clear fields
+
       setTitle("");
+
       setContent("");
+
+      // Refresh page
+
+      window.location.reload();
 
     } catch (error) {
 
       console.log(error);
+
+      alert("Failed to create post");
 
     }
   };
@@ -53,7 +62,10 @@ function CreatePost() {
           placeholder="Post Title"
           className="form-control mb-3"
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e) =>
+            setTitle(e.target.value)
+          }
+          required
         />
 
         <textarea
@@ -61,7 +73,10 @@ function CreatePost() {
           className="form-control mb-3"
           rows="5"
           value={content}
-          onChange={(e) => setContent(e.target.value)}
+          onChange={(e) =>
+            setContent(e.target.value)
+          }
+          required
         ></textarea>
 
         <button className="btn btn-primary">
@@ -69,6 +84,7 @@ function CreatePost() {
         </button>
 
       </form>
+
     </div>
   );
 }
