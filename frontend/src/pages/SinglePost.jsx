@@ -105,8 +105,9 @@ function SinglePost() {
   };
 
   loadData();
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
 }, []);
+
 
   if (!post) {
     return (
