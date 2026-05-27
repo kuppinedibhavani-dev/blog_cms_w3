@@ -7,6 +7,7 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Posts from "./pages/Posts";
 import ProtectedRoute from "./components/ProtectedRoute";
+import SinglePost from "./pages/SinglePost";
 
 function App() {
   return (
@@ -23,6 +24,12 @@ function App() {
         <Route path="/login" element={<Login />} />
 
         <Route path="/posts" element={<ProtectedRoute>
+          <Route path="/posts/:id" element={
+             <ProtectedRoute>
+                <SinglePost />
+             </ProtectedRoute>
+  }
+/>
          <Posts />
         </ProtectedRoute>
   }

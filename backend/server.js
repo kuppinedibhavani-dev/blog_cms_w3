@@ -7,6 +7,7 @@ require("dotenv").config();
 const authRoutes = require("./src/routes/authRoutes");
 const postRoutes = require("./src/routes/postRoutes");
 const authMiddleware = require("./src/middleware/authMiddleware");
+const commentRoutes = require( "./src/routes/commentRoutes");
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
+app.use("/api/comments", commentRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)

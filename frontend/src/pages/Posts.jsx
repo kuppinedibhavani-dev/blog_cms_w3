@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import CreatePost from "../components/CreatePost";
+import { Link } from "react-router-dom";
 
 function Posts() {
 
@@ -157,7 +158,15 @@ const updatePost = async (id) => {
     ) : (
 
       <>
-        <h4>{post.title}</h4>
+        <Link
+  to={`/posts/${post._id}`}
+  style={{
+    textDecoration: "none",
+    color: "inherit",
+  }}
+>
+  <h4>{post.title}</h4>
+</Link>
 
         <p>{post.content}</p>
 
